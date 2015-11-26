@@ -2,9 +2,9 @@
   "name": "forsigner",
   "version": "1.0.0",
   "description": "forsigner's tool",
-  "main": "./bin/forsigner.js",
+  "main": "./forsigner.js",
   "bin": {
-    "forsigner": "./bin/forsigner.js"
+    "forsigner": "./forsigner.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
