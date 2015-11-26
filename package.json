@@ -1,6 +1,6 @@
 {
   "name": "forsigner",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "forsigner's tool",
   "main": "./forsigner.js",
   "bin": {
