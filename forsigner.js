@@ -5,10 +5,11 @@ var program = require('commander');
 var Promise = require('bluebird');
 var dotfiles = require('./lib/dotfiles');
 var ip = require('./lib/ip');
+var pkg = require('./package.json');
 
 program
-  .version('v1.0.0')
-  .option('-v, --version', 'display version');
+  .version('v' + pkg.version)
+    .option('-v, --version', 'display version');
 
 program
   .command('get [filename]')
