@@ -3,6 +3,7 @@
 
 var program = require('commander');
 var Promise = require('bluebird');
+var figlet = require('figlet');
 var dotfiles = require('./lib/dotfiles');
 var ip = require('./lib/ip');
 var pkg = require('./package.json');
@@ -20,5 +21,19 @@ program
   .command('ip')
   .description('Show your ip')
   .action(ip);
+
+program
+  .command('hello')
+  .description('Show your ip')
+  .action(function() {
+    figlet('Hello from forsigner', function(err, data) {
+      if (err) {
+        console.log('Something went wrong...');
+        console.dir(err);
+        return;
+      }
+      console.log(data);
+    });
+  });
 
 program.parse(process.argv);
