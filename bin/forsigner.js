@@ -2,6 +2,7 @@
 'use strict';
 
 var fs = require('fs-extra');
+var path = require('path');
 var request = require('request');
 var userhome = require('userhome');
 var program = require('commander');
@@ -23,7 +24,7 @@ program
       throw new Error('To many arguments, you should pass one argument');
     }
 
-    var output = userhome('repos', 'forsigner', filename);
+    var output = path.join(process.cwd(), filename);
     var url = 'https://raw.githubusercontent.com/forsigner/dotfiles/master/' + filename;
 
     console.log('download ' + filename + ' start');
