@@ -7,6 +7,9 @@ var figlet = require('figlet');
 var dotfiles = require('./lib/dotfiles');
 var ip = require('./lib/ip');
 var pkg = require('./package.json');
+var updateNotifier = require('update-notifier');
+
+updateNotifier({pkg: pkg}).notify();
 
 program
   .version('v' + pkg.version)
