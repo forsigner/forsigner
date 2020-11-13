@@ -1,8 +1,2 @@
 # OSX
 .DS_Store
-
-# node
-node_modules
-
-# atom
-.tag*
